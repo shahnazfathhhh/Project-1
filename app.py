@@ -20,9 +20,11 @@ hands = mp_hands.Hands(
 )
 
 def preprocess_image(image):
-    image = cv2.resize(image, (128,128))
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)  
+    image = cv2.resize(image, (64,64))               
     image = image / 255.0
-    image = np.expand_dims(image, axis=0)
+    image = np.expand_dims(image, axis=-1)           
+    image = np.expand_dims(image, axis=0)            
     return image
 
 @app.route("/")
@@ -44,6 +46,7 @@ def predict():
         result_mp = hands.process(rgb_frame)
 
         if result_mp.multi_hand_landmarks:
+
             for hand_landmarks in result_mp.multi_hand_landmarks:
 
                 h, w, _ = frame.shape
