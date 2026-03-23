@@ -7,7 +7,7 @@ import io
 
 app = Flask(__name__)
 
-model = tf.keras.models.load_model("model.h5")
+model = tf.keras.models.load_model("finger_count_model.h5")
 
 classes = ['1','2','3','4','5']
 
