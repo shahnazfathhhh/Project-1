@@ -61,7 +61,7 @@ python Gestures.py
 Tekan `q` untuk keluar.
 
 ### 3. Menjalankan web app
-Setelah web app selesai dibuat, jalankan backend untuk mengakses antarmuka melalui browser.
+Jalankan backend untuk mengakses antarmuka melalui browser.
 ```bash
 python app.py
 ```
