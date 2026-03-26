@@ -68,5 +68,5 @@ python app.py
 
 Setelah server berjalan, buka browser dan akses alamat lokal yang muncul pada terminal
 ```bash
-[python app.py](http://127.0.0.1:5000/)
+http://127.0.0.1:5000/
 ```
